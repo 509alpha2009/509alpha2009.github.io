@@ -1,0 +1,13 @@
+from zipfile import ZipFile
+import os
+
+# Create a zip file containing the website files
+zip_path = "/mnt/data/Kyllies_Fashion_Site.zip"
+with ZipFile(zip_path, 'w') as zipf:
+    zipf.write("/mnt/data/kyllies_fashion_produits.html", arcname="index.html")
+    zipf.write("/mnt/data/logo.png", arcname="logo.png")
+    zipf.write("/mnt/data/produit1.jpg", arcname="produit1.jpg")
+    zipf.write("/mnt/data/produit2.jpg", arcname="produit2.jpg")
+    zipf.write("/mnt/data/produit3.jpg", arcname="produit3.jpg")
+
+zip_path
